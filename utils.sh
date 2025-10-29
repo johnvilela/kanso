@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_FILE="$KANZO_REPO/kanzo.log"
+LOG_FILE="$KANSO_REPO/kanzo.log"
 
 log() {
     local level="${1:-INFO}"
