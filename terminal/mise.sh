@@ -1,6 +1,6 @@
 #!/bin/bash
 
-silent_log wget -qO https://mise.run/fish | sh
+silent_log wget -q https://mise.run/fish | sh
 
 if [[ -f "$HOME/.local/bin/mise" ]]; then
     eval "$($HOME/.local/bin/mise activate bash)"
