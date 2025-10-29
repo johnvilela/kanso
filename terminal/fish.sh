@@ -9,5 +9,8 @@ if command -v fish >/dev/null 2>&1; then
     fi
 
     log "INFO" "Setting fish as default shell for $USER"
-    chsh -s "$FISH_PATH" "$USER" || true
+
+    if command -v chsh >/dev/null 2>&1; then
+        sudo chsh -s "$FISH_PATH" "$USER" || true
+    fi
 fi
