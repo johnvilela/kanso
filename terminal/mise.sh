@@ -1,6 +1,8 @@
 #!/bin/bash
 
-silent_log wget -q https://mise.run | sh
+log "INFO" "Installing Mise"
+
+silent_log curl https://mise.run | sh
 
 if [[ -f "$HOME/.local/bin/mise" ]]; then
     eval "$($HOME/.local/bin/mise activate bash)"
