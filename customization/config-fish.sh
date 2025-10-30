@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEFAULT_CONFIG="${REPO_ROOT}/configs/config.fish"
+DEFAULT_CONFIG="$KANSO_REPO/configs/config.fish"
 CUSTOM_CONFIG="$USER_SETUP_DIR/configs/config.fish"
 
 if [[ -f "$CUSTOM_CONFIG" ]]; then
