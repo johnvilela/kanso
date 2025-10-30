@@ -13,5 +13,5 @@ if command_exists mise; then
     silent_log mise install --yes nodejs@20.19.0
     silent_log mise use nodejs@20.19.0 --global
 
-    echo 'mise activate fish | source' >>~/.config/fish/config.fish
+    echo '$HOME/.local/bin/mise activate fish | source' >>~/.config/fish/config.fish
 fi
