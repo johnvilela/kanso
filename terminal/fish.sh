@@ -15,5 +15,4 @@ if command -v fish >/dev/null 2>&1; then
     fi
 
     mkdir -p ~/.config/fish
-    touch ~/.config/fish/config.fish
 fi
