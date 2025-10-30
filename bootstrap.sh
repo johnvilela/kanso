@@ -17,3 +17,7 @@ if [[ " $* " == *" --simple"* ]]; then
 else
     source "$KANSO_REPO/desktop.sh"
 fi
+
+if gum confirm "Do you want to reboot the machine now?"; then
+    sudo reboot
+fi
