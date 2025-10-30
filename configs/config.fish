@@ -19,7 +19,14 @@ alias gstp="git stash pop"
 alias gsta="git stash apply"
 alias gsw="git switch"
 
+for p in /var/lib/flatpak/exports/bin ~/.local/share/flatpak/exports/bin
+    if test -d $p
+        fish_add_path $p
+    end
+end
+
 alias vpn="sudo openfortivpn -c ~/.openforticonfig --saml-login"
+alias zed="flatpak run dev.zed.Zed"
 
 starship init fish | source
 
