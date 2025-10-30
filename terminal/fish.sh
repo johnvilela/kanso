@@ -13,4 +13,7 @@ if command -v fish >/dev/null 2>&1; then
     if command -v chsh >/dev/null 2>&1; then
         sudo chsh -s "$FISH_PATH" "$USER" || true
     fi
+
+    mkdir -p ~/.config/fish
+    touch ~/.config/fish/config.fish
 fi
