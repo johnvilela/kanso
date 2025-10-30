@@ -4,6 +4,7 @@ log "INFO" "Configuring Flatpak with Flathub"
 
 if command -v flatpak >/dev/null 2>&1; then
     silent_log sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    silent_log sudo flatpak repair
 else
     log "ERROR" "flatpak not found (unexpected since it was requested). Skipping Flathub."
 fi
