@@ -21,6 +21,7 @@ source "$KANSO_REPO/apps/docker.sh"
 source "$KANSO_REPO/apps/alacritty.sh"
 source "$KANSO_REPO/apps/yaak.sh"
 source "$KANSO_REPO/apps/openfortivpn.sh"
+source "$KANSO_REPO/apps/ulauncher.sh"
 
 # CUSTOMIZATION STEPS
 source "$KANSO_REPO/customization/config-fish.sh"
@@ -30,7 +31,6 @@ source "$KANSO_REPO/customization/projects.sh"
 
 # DESKTOP STEP
 source "$KANSO_REPO/desktop/gnome-settings.sh"
-source "$KANSO_REPO/desktop/ulauncher.sh"
 source "$KANSO_REPO/desktop/font.sh"
 
 gsettings set org.gnome.desktop.screensaver lock-enabled true
