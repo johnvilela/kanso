@@ -9,10 +9,15 @@ unzip -q openfortivpn.zip -d openfortivpntmp
 mv openfortivpntmp/*/* openfortivpn
 rm -rf openfortivpntmp
 
-silent_log bash -c "./openfortivpn/autogen.sh"
-silent_log bash -c "./openfortivpn/configure --prefix=/usr/local --sysconfdir=/etc"
-silent_log bash -c "cd ./openfortivpn && make && cd .."
-silent_log bash -c "cd ./openfortivpn && sudo make install && cd .."
+pushd openfortivpn >/dev/null
+
+silent_log ./autogen.sh
+silent_log ./configure --prefix=/usr/local --sysconfdir=/etc
+silent_log make
+silent_log sudo make install
+
+popd >/dev/null
+
 cd -
 
 log "SUCCESS" "OpenFortiVPN installed"
