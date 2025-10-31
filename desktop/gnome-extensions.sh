@@ -23,8 +23,12 @@ if command -v gnome-extensions >/dev/null 2>&1; then
 
     pushd pop-shell >/dev/null
     git checkout master_noble
+
+    pushd shell >/dev/null
     log "INFO" "Building Pop Shell"
     sudo make local-install
+
+    popd >/dev/null
 
     popd >/dev/null
 
@@ -36,7 +40,6 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gext install undecorate@sun.wxg@gmail.com
     gext install AlphabeticalAppGrid@stuarthayhurst
 
-    sudo cp ~/.local/share/gnome-shell/extensions/pop-shell\@system76.com/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.gnome.shell.extensions.blur-my-shell.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
