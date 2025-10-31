@@ -30,8 +30,8 @@ source "$KANSO_REPO/customization/projects.sh"
 
 # DESKTOP STEP
 source "$KANSO_REPO/desktop/gnome-settings.sh"
-source "$KANSO_REPO/desktop/font.sh"
 source "$KANSO_REPO/desktop/ulauncher.sh"
+source "$KANSO_REPO/desktop/font.sh"
 
 gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.session idle-delay 300
