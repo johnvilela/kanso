@@ -46,6 +46,7 @@ PACKAGES=(
 
     # Gnome extensions
     gnome-tweak-tool gnome-sushi gnome-shell-extensions gnome-shell-extension-manager pipx
+    ulauncher
 )
 
 silent_log sudo apt-get install -yq --no-install-recommends "${PACKAGES[@]}"
