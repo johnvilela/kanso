@@ -14,6 +14,8 @@ rm -rf JetBrainsMono.zip JetBrainsMono
 (fc-cache -f >/dev/null 2>&1) &
 disown
 
+gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font 10'
+
 log "SUCCESS" "JetBrains Mono installed"
 
 cd -
