@@ -15,6 +15,9 @@ source "$KANSO_REPO/terminal/flatpak.sh"
 
 # APPS STEPS
 source "$KANSO_REPO/apps/docker.sh"
+source "$KANSO_REPO/apps/alacritty.sh"
+source "$KANSO_REPO/apps/yaak.sh"
+source "$KANSO_REPO/apps/openfortivpn.sh"
 
 # CUSTOMIZATION STEPS
 source "$KANSO_REPO/customization/config-fish.sh"
