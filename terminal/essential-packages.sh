@@ -27,7 +27,7 @@ PACKAGES=(
     # Build toolchain
     build-essential gcc g++ make automake autoconf pkg-config
     cmake ninja-build gettext unzip zip htop btop gpg libfontconfig1-dev
-    libxcb-xfixes0-dev libxkbcommon-dev dbus-x11 pipx node-typescript
+    libxcb-xfixes0-dev libxkbcommon-dev dbus-x11 pipx node-typescript typescript
 
     # Networking/tools
     curl git

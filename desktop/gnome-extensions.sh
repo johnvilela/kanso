@@ -19,16 +19,12 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     # Install Pop Shell from source
     pushd /tmp >/dev/null
 
-    git clone -q https://github.com/pop-os/shell.git "pop-shell"
-
-    pushd pop-shell >/dev/null
-    git checkout master_noble
+    git clone -q https://github.com/pop-os/shell.git
 
     pushd shell >/dev/null
+    git checkout master_noble
     log "INFO" "Building Pop Shell"
-    sudo make local-install
-
-    popd >/dev/null
+    sudo make local-install -y
 
     popd >/dev/null
 
