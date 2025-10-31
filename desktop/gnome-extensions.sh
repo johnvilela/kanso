@@ -11,24 +11,30 @@ fi
 gum confirm "To install Gnome extensions, you need to accept some confirmations. Ready?"
 
 if command -v gnome-extensions >/dev/null 2>&1; then
-    # git clone https://github.com/pop-os/shell.git "${REPO_ROOT}/tmp/pop-shell"
-    # cd "${REPO_ROOT}/tmp/pop-shell"
-    # log "INFO" "Building Pop Shell"
-    # make local-install
-    # cd "${REPO_ROOT}"
-
     gnome-extensions disable tiling-assistant@ubuntu.com
     gnome-extensions disable ubuntu-appindicators@ubuntu.com
     gnome-extensions disable ubuntu-dock@ubuntu.com
     gnome-extensions disable ding@rastersoft.com
 
-    gext install pop-shell@system76.com
+    # Install Pop Shell from source
+    pushd /tmp >/dev/null
+
+    git clone https://github.com/pop-os/shell.git "pop-shell"
+
+    pushd pop-shell >/dev/null
+    log "INFO" "Building Pop Shell"
+    make local-install
+
+    popd >/dev/null
+
+    popd >/dev/null
+    log "SUCCESS" "Pop Shell installed from source"
+
     gext install just-perfection-desktop@just-perfection
     gext install blur-my-shell@aunetx
     gext install undecorate@sun.wxg@gmail.com
     gext install AlphabeticalAppGrid@stuarthayhurst
 
-    sudo cp ~/.local/share/gnome-shell/extensions/pop-shell\@system76.com/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.gnome.shell.extensions.blur-my-shell.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
