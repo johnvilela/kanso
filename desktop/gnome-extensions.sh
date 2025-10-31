@@ -24,7 +24,7 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     pushd shell >/dev/null
     git checkout master_noble
     log "INFO" "Building Pop Shell"
-    make local-install
+    make local-install || true
 
     popd >/dev/null
 
