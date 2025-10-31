@@ -14,7 +14,6 @@ if command_exists flatpak; then
 
     FLATPAK_APPS=(
         "dev.zed.Zed"
-        "io.neovim.nvim"
         "md.obsidian.Obsidian"
         "app.zen_browser.zen"
         "org.mozilla.Thunderbird"
