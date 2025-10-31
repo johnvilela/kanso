@@ -2,7 +2,7 @@
 
 log "INFO" "Installing OpenFortiVPN"
 
-cd /tmp
+pushd /tmp >/dev/null
 mkdir -p openfortivpn
 wget -qO openfortivpn.zip https://github.com/adrienverge/openfortivpn/archive/refs/tags/v1.23.1.zip
 unzip -q openfortivpn.zip -d openfortivpntmp
@@ -18,6 +18,6 @@ silent_log sudo make install
 
 popd >/dev/null
 
-cd -
+popd >/dev/null
 
 log "SUCCESS" "OpenFortiVPN installed"
