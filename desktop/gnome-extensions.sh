@@ -24,7 +24,7 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     pushd pop-shell >/dev/null
     git checkout master_noble
     log "INFO" "Building Pop Shell"
-    make local-install
+    sudo make local-install
 
     popd >/dev/null
 
