@@ -71,6 +71,8 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock static-blur true
     gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock style-dash-to-dock 0
 
+    gnome-extensions enable pop-shell@system76.com
+
     log "SUCCESS" "Extensions installed and configured"
 else
     log "WARN" "GNOME is not running or gnome-extensions not available, skipping extension setup."
