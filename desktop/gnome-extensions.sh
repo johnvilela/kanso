@@ -57,7 +57,6 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.just-perfection workspace-popup false
     gsettings set org.gnome.shell.extensions.just-perfection search false
     gsettings set org.gnome.shell.extensions.just-perfection window-preview-caption false
-    gsettings set org.gnome.shell.extensions.just-perfection show-overview-on-startup false
 
     gsettings set org.gnome.shell.extensions.blur-my-shell.appfolder blur false
     gsettings set org.gnome.shell.extensions.blur-my-shell.lockscreen blur false
