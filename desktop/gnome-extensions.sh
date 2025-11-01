@@ -57,6 +57,19 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.just-perfection workspace-popup false
     gsettings set org.gnome.shell.extensions.just-perfection search false
     gsettings set org.gnome.shell.extensions.just-perfection window-preview-caption false
+    gsettings set org.gnome.shell.extensions.just-perfection weather false
+    gsettings set org.gnome.shell.extensions.just-perfection search false
+    gsettings set org.gnome.shell.extensions.just-perfection dash-separator false
+    gsettings set org.gnome.shell.extensions.just-perfection quick-settings-dark-mode false
+    gsettings set org.gnome.shell.extensions.just-perfection quick-settings-night-light false
+    gsettings set org.gnome.shell.extensions.just-perfection show-apps-button false
+    gsettings set org.gnome.shell.extensions.just-perfection world-clock false
+    gsettings set org.gnome.shell.extensions.just-perfection workspace-popup false
+    gsettings set org.gnome.shell.extensions.just-perfection window-picker-icon false
+    gsettings set org.gnome.shell.extensions.just-perfection window-preview-caption false
+    gsettings set org.gnome.shell.extensions.just-perfection window-preview-close-button false
+    gsettings set org.gnome.shell.extensions.just-perfection ripper-box false
+    gsettings set org.gnome.shell.extensions.just-perfection events-button false
 
     gsettings set org.gnome.shell.extensions.blur-my-shell.appfolder blur false
     gsettings set org.gnome.shell.extensions.blur-my-shell.lockscreen blur false
