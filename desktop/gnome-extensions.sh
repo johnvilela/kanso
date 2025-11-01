@@ -24,7 +24,7 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     pushd shell >/dev/null
     git checkout master_noble
     log "INFO" "Building Pop Shell"
-    silent_log bash -c "make local-install || true"
+    make local-install || true
 
     popd >/dev/null
 
@@ -50,8 +50,6 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.pop-shell gap-outer 8
     gsettings set org.gnome.shell.extensions.pop-shell active-hint true
     gsettings set org.gnome.shell.extensions.pop-shell show-title false
-    gsettings set org.gnome.shell.extensions.pop-shell focus-cross-screen true
-    gsettings set org.gnome.shell.extensions.pop-shell mouse-cursor-follows-active-window false
     gsettings set org.gnome.shell.extensions.pop-shell management-orientation 'horizontal'
 
     gsettings set org.gnome.shell.extensions.just-perfection animation 2
