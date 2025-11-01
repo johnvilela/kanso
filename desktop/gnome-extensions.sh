@@ -68,7 +68,7 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.just-perfection window-picker-icon false
     gsettings set org.gnome.shell.extensions.just-perfection window-preview-caption false
     gsettings set org.gnome.shell.extensions.just-perfection window-preview-close-button false
-    gsettings set org.gnome.shell.extensions.just-perfection ripper-box false
+    gsettings set org.gnome.shell.extensions.just-perfection ripple-box false
     gsettings set org.gnome.shell.extensions.just-perfection events-button false
 
     gsettings set org.gnome.shell.extensions.blur-my-shell.appfolder blur false
