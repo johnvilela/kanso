@@ -24,11 +24,12 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     pushd shell >/dev/null
     git checkout master_noble
     log "INFO" "Building Pop Shell"
-    make local-install || true
+    silent_log bash -c "make local-install || true"
 
     popd >/dev/null
 
     popd >/dev/null
+
     log "SUCCESS" "Pop Shell installed from source"
 
     gext install just-perfection-desktop@just-perfection
@@ -36,15 +37,30 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gext install undecorate@sun.wxg@gmail.com
     gext install AlphabeticalAppGrid@stuarthayhurst
 
+    sudo cp ~/.local/share/gnome-shell/extensions/pop-shell\@system76.com/schemas/org.gnome.shell.extensions.pop-shell.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.gnome.shell.extensions.blur-my-shell.gschema.xml /usr/share/glib-2.0/schemas/
     sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
     sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
+    gsettings set org.gnome.shell.extensions.pop-shell tile-by-default true
+    gsettings set org.gnome.shell.extensions.pop-shell smart-gaps true
+    gsettings set org.gnome.shell.extensions.pop-shell snap-to-grid true
+    gsettings set org.gnome.shell.extensions.pop-shell gap-inner 6
+    gsettings set org.gnome.shell.extensions.pop-shell gap-outer 8
+    gsettings set org.gnome.shell.extensions.pop-shell active-hint true
+    gsettings set org.gnome.shell.extensions.pop-shell show-title false
+    gsettings set org.gnome.shell.extensions.pop-shell focus-cross-screen true
+    gsettings set org.gnome.shell.extensions.pop-shell mouse-cursor-follows-active-window false
+    gsettings set org.gnome.shell.extensions.pop-shell management-orientation 'horizontal'
+
     gsettings set org.gnome.shell.extensions.just-perfection animation 2
     gsettings set org.gnome.shell.extensions.just-perfection dash-app-running true
     gsettings set org.gnome.shell.extensions.just-perfection workspace true
     gsettings set org.gnome.shell.extensions.just-perfection workspace-popup false
+    gsettings set org.gnome.shell.extensions.just-perfection search false
+    gsettings set org.gnome.shell.extensions.just-perfection window-preview-caption false
+    gsettings set org.gnome.shell.extensions.just-perfection show-overview-on-startup false
 
     gsettings set org.gnome.shell.extensions.blur-my-shell.appfolder blur false
     gsettings set org.gnome.shell.extensions.blur-my-shell.lockscreen blur false
