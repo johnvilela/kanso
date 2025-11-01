@@ -32,6 +32,7 @@ source "$KANSO_REPO/customization/projects.sh"
 # DESKTOP STEP
 source "$KANSO_REPO/desktop/gnome-settings.sh"
 source "$KANSO_REPO/desktop/gnome-extensions.sh"
+source "$KANSO_REPO/desktop/gnome-key-binding.sh"
 source "$KANSO_REPO/desktop/font.sh"
 
 gsettings set org.gnome.desktop.screensaver lock-enabled true
