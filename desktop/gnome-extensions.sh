@@ -50,7 +50,6 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.pop-shell gap-outer 8
     gsettings set org.gnome.shell.extensions.pop-shell active-hint true
     gsettings set org.gnome.shell.extensions.pop-shell show-title false
-    gsettings set org.gnome.shell.extensions.pop-shell management-orientation 'horizontal'
 
     gsettings set org.gnome.shell.extensions.just-perfection animation 2
     gsettings set org.gnome.shell.extensions.just-perfection dash-app-running true
