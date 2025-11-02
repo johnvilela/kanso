@@ -1,10 +1,9 @@
 apps=(
-    "org.zen_browser.Zen.desktop"
-    "google-chrome.desktop"
+    "app.zen_browser.Zen.desktop"
     "Alacritty.desktop"
-    "Neovim.desktop"
-    "code.desktop"
     "md.obsidian.Obsidian.desktop"
+    "yaak.desktop"
+    "org.mozilla.Thunderbird.desktop"
 )
 
 # Array to hold installed favorite apps
