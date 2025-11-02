@@ -16,21 +16,7 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gnome-extensions disable ubuntu-dock@ubuntu.com
     gnome-extensions disable ding@rastersoft.com
 
-    # Install Pop Shell from source
-    pushd /tmp >/dev/null
-
-    git clone -q https://github.com/pop-os/shell.git
-
-    pushd shell >/dev/null
-    git checkout master_noble
-    log "INFO" "Building Pop Shell"
-    make local-install || true
-
-    popd >/dev/null
-
-    popd >/dev/null
-
-    log "SUCCESS" "Pop Shell installed from source"
+    source "$KANSO_REPO/desktop/pop-shell.sh"
 
     gext install just-perfection-desktop@just-perfection
     gext install blur-my-shell@aunetx
@@ -83,8 +69,6 @@ if command -v gnome-extensions >/dev/null 2>&1; then
     gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock sigma 30
     gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock static-blur true
     gsettings set org.gnome.shell.extensions.blur-my-shell.dash-to-dock style-dash-to-dock 0
-
-    source "$KANSO_REPO/desktop/pop-shell.sh"
 
     log "SUCCESS" "Extensions installed and configured"
 else
