@@ -13,6 +13,13 @@ source "$KANSO_REPO/required/gum.sh"
 
 source "$KANSO_REPO/utils.sh"
 
+if [ ! -d "$USER_SETUP_DIR" ] || [ -z "$(ls -A "$USER_SETUP_DIR" 2>/dev/null)" ]; then
+    if gum confirm "We see that you have no 'user-setup'. Do you want to setup default files at '~/user-setup/' first to make your life easier?"; then
+        log "INFO" "Check the 'user-setup' docs for more details: https://your-docs-url-here"
+        exit 0
+    fi
+fi
+
 if [[ " $* " == *" --simple"* ]]; then
     source "$KANSO_REPO/simple.sh"
 else
