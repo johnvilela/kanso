@@ -1,5 +1,9 @@
+#!/bin/bash
+
+log "INFO" "Adding favorite apps to Dock"
+
 apps=(
-    "app.zen_browser.Zen.desktop"
+    "app.zen_browser.zen.desktop"
     "Alacritty.desktop"
     "md.obsidian.Obsidian.desktop"
     "yaak.desktop"
@@ -33,3 +37,5 @@ favorites_list="[${favorites_list%,}]"
 
 # Set the favorite apps
 gsettings set org.gnome.shell favorite-apps "$favorites_list"
+
+log "SUCCESS" "Favorite apps added to Dock successfully"
