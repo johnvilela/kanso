@@ -17,6 +17,8 @@ if command_exists flatpak; then
         "md.obsidian.Obsidian"
         "app.zen_browser.zen"
         "org.mozilla.Thunderbird"
+        "com.github.tchx84.Flatseal"
+        "io.github.flattool.Warehouse"
     )
 
     for app in "${FLATPAK_APPS[@]}"; do
