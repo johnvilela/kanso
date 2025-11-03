@@ -29,4 +29,4 @@ fi
 cd "$TARGET_DIR"
 
 echo "Running bootstrap.sh..."
-./bootstrap.sh
+source ./bootstrap.sh

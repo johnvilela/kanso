@@ -4,7 +4,7 @@ set -Eeuo pipefail
 
 trap 'log "ERROR" "Script failed at line $LINENO. Check the log file or run the install commands again"; exit 1' ERR
 
-KANSO_REPO="${KANSO_REPO:-$HOME/.local/share/kanzo}"
+KANSO_REPO="${KANSO_REPO:-$HOME/.local/share/kanso}"
 USER_SETUP_DIR="$HOME/user-setup"
 
 source "$KANSO_REPO/check-os.sh"
