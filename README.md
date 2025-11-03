@@ -9,13 +9,13 @@ It’s a single-run script that builds a clean and minimal setup for both **Desk
 Run this command in your terminal:
 
 ```bash
-eval "$(wget -qO- https://raw.githubusercontent.com/johnvilela/kanso/main/install.sh)"
+eval "$(wget -qO- https://raw.githubusercontent.com/johnvilela/kanso/master/install.sh)"
 ```
 
 Or, for a lighter setup (ideal for WSL or terminal-only environments):
 
 ```bash
-eval "$(wget -qO- https://raw.githubusercontent.com/johnvilela/kanso/main/install.sh)" --simple
+eval "$(wget -qO- https://raw.githubusercontent.com/johnvilela/kanso/master/install.sh)" --simple
 ```
 
 - **Default (Full Install):** Sets up the complete Kanso desktop experience with GNOME customization, Pop Shell, themes, and applications.
