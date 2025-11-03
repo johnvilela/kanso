@@ -11,7 +11,7 @@ if ! command -v git >/dev/null 2>&1; then
   sudo apt install -y git
 fi
 
-REPO_URL="https://github.com/insert-repo-owner/kanso.git"
+REPO_URL="https://github.com/johnvilela/kanso.git"
 TARGET_DIR="$HOME/.local/share/kanso"
 
 rm -rf "$TARGET_DIR"
