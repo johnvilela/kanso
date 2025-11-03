@@ -60,6 +60,23 @@ This will create:
 ~/projects/personal/repo2
 ```
 
+## Roadmap
+
+Kanso is a living project that will continue to evolve while maintaining its simplicity and purpose.  
+The following items are planned for future releases:
+
+- **Container Engine Selection** — Allow users to choose between Podman, Docker, or none  
+- **Shell Options** — Let users pick their preferred shell: Fish, Zsh, or Bash  
+- **Editor Choice** — Select between VSCode, Zed, or Neovim as the main code editor  
+- **Miscellaneous Apps** — Offer optional installs for Spotify, Discord, WhatsApp, Signal, and Telegram  
+- **ASCII Art Branding** — Add a simple and elegant Kanso ASCII logo displayed during installation  
+- **Language Runtimes** — Let users choose to install Node.js, Ruby, Python, Rust, or Go  
+- **Theme Selection** — Provide multiple GNOME and system themes beyond the default Ubuntu look  
+
+---
+
+*Have suggestions or ideas to improve Kanso? Feel free to open an issue or discussion on GitHub — simplicity grows through collaboration.*
+
 ## Contribution Guidelines
 Contributions are welcome! Please fork the repository and submit a pull request with your changes. Make sure to follow the existing code style, include test descriptions to be reproducible, and update the documentation as needed.
 
